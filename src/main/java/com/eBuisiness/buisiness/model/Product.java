@@ -1,11 +1,19 @@
 package com.eBuisiness.buisiness.model;
 
-//@Entity
+import org.hibernate.validator.constraints.Length;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 
-    //@Id
-    //@GeneratedValue
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Length(min=3, max=20)
     private String nom;
     private int prix;
 
