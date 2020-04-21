@@ -17,8 +17,8 @@ public class ProductController {
     @GetMapping(value = "Product/{id}")
     public Product afficherUnProduit(@PathVariable int id) throws ProductNotFoundException{
 
-        //return productDao.findById(id)
-              //  .orElseThrow(() -> new ProductNotFoundException(id));
+       //return productDao.findById(id)
+               //.orElseThrow(() -> new ProductNotFoundException(id));
 
         Product product = productDao.findById(id);
         if(product == null) throw
